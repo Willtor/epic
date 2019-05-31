@@ -1469,6 +1469,41 @@ An improved Bomber, with improved attack and a higher movement\
  radius.\
 ")
 
+[unit_drone]
+name          = _("Drone")
+class         = "Air"
+tech_req      = "Automated Flight"
+obsolete_by   = "None"
+graphic       = "u.drone"
+graphic_alt   = "u.stealth_bomber"
+sound_move    = "m_stealth_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 14
+defense       = 3
+hitpoints     = 15
+firepower     = 2
+move_rate     = 12
+vision_radius_sq = 14
+transport_cap = 0
+fuel          = 4
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker",
+                "HasNoZOC", "NoVeteran", "Helicopter"
+roles         = ""
+helptext      = _("\
+Drones are semi-automated airplanes designed to stay aloft for extended\
+ periods of time.  They serve a multi-purpose role as reconnaissance\
+ and bombing.  They're effective and inexpensive to deploy in spite of\
+ their stealth properties, though they depend on existing air superiority.\
+")
+
 [unit_trireme]
 ; /* TRANS: unit type */
 name          = _("Trireme")
@@ -1497,6 +1532,12 @@ uk_food       = 0
 uk_gold       = 0
 cargo         = "Land"
 flags         = "BadCityDefender"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 The Trireme is your first boat unit. It can act\

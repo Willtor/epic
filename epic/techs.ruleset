@@ -690,6 +690,14 @@ flags    = ""
 graphic     = "a.seafaring"
 graphic_alt = "-"
 
+[advance_automated_flight]
+name     = _("Automated Flight")
+req1     = "Space Flight"
+req2     = "Stealth"
+flags    = ""
+graphic     = "a.space_flight"
+graphic_alt = "-"
+
 [advance_space_flight]
 name     = _("Space Flight")
 req1     = "Computers"

@@ -88,6 +88,7 @@ tiles = { "row", "column", "tag"
   1, 16, "u.partisan"		; [BB] & [CT]
   1, 17, "u.pikemen"		; [T]
   1, 18, "u.hovertank"          ; [Willtor]
+  1, 19, "u.drone"              ; [Willtor]
   2,  0, "u.marines"		; [GB]
   2,  1, "u.spy"		; [EW] & [CT]
   2,  2, "u.engineers"		; [Nemo] & [CT]
