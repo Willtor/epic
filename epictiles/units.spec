@@ -107,6 +107,7 @@ tiles = { "row", "column", "tag"
   2, 15, "u.leader"		; [GB]
   2, 16, "u.barbarian_leader"	; FiftyNine
   2, 17, "u.migrants"		; Eleazar
+  2, 18, "u.future_soldier"     ; Willtor
 ;  2, 19, "u.train"		; Eleazar
 
 }

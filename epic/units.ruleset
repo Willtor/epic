@@ -801,7 +801,7 @@ Alpine Troops are highly mobile units as well as\
 name          = _("Riflemen")
 class         = "Land"
 tech_req      = "Conscription"
-obsolete_by   = "None"
+obsolete_by   = "Future Soldier"
 graphic       = "u.riflemen"
 graphic_alt   = "-"
 sound_move    = "m_riflemen"
@@ -827,6 +827,39 @@ roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
 Riflemen are World War-era infantry, very good\
  at defending your cities.\
+")
+
+[unit_future_soldier]
+name          = _("Future Soldier")
+class         = "Land"
+tech_req      = "Cybernetics"
+obsolete_by   = "None"
+graphic       = "u.future_soldier"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 7
+defense       = 6
+hitpoints     = 25
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = ""
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Future Soldiers are the last word in infantry.  They're cybernetically\
+ enhanced and armored with space age materials, designed for maximal\
+ effectiveness on the battlefield and in defense of cities.\
 ")
 
 [unit_marines]

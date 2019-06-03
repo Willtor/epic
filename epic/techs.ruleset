@@ -244,6 +244,14 @@ flags    = ""
 graphic     = "a.currency"
 graphic_alt = "-"
 
+[advance_cybernetics]
+name     = _("Cybernetics")
+req1     = "Robotics"
+req2     = "Space Flight"
+flags    = ""
+graphic     = "a.robotics"
+graphic_alt = "-"
+
 [advance_democracy]
 name     = _("Democracy")
 req1     = "Banking"
