@@ -857,7 +857,7 @@ uk_gold       = 0
 flags         = ""
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
-Future Soldiers are the last word in infantry.  They're cybernetically\
+Future Soldiers are the final word in infantry.  They're cybernetically\
  enhanced and armored with space age materials, designed for maximal\
  effectiveness on the battlefield and in defense of cities.\
 ")
