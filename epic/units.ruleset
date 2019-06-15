@@ -641,7 +641,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 4
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
@@ -674,7 +674,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 5
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 Development of the longbow allows archers to fire more massive\
@@ -1279,7 +1279,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 4
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1313,7 +1313,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 5
 roles         = "AttackStrongStartUnit", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy\
@@ -1348,7 +1348,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 5
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is an upgraded cannon. It is a very\
@@ -1382,7 +1382,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 5
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Howitzers are upgraded artillery with improved\
@@ -1455,7 +1455,7 @@ uk_food       = 0
 uk_gold       = 0
 flags         = "FieldUnit", "OneAttack", "AirAttacker",
                 "HasNoZOC", "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 5
 roles         = ""
 helptext      = _("\
 Bombers are specialized airborne units that may\
@@ -1564,7 +1564,7 @@ uk_food       = 0
 uk_gold       = 0
 flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker",
                 "HasNoZOC", "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 5
 roles         = ""
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
@@ -1904,7 +1904,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "BadCityDefender", "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 6
 roles         = ""
 helptext      = _("\
 The Battleship is the supreme naval unit with\
@@ -2042,7 +2042,7 @@ uk_food       = 0
 uk_gold       = 0
 flags         = "FieldUnit", "OneAttack", "AirAttacker",
                 "HasNoZOC", "Bombarder"
-bombard_rate  = 1
+bombard_rate  = 5
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
