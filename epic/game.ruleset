@@ -1,3 +1,6 @@
+; This is the experimental ruleset. See README.experimental
+; for a detailed description.
+
 ; Modifying this file:
 ; You should not modify this file except to make bugfixes or
 ; for other "maintenance".  If you want to make custom changes,
@@ -10,7 +13,7 @@
 ; than minor changes.
 
 [datafile]
-description="Classic game rules for Freeciv"
+description="Experimental game rules for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 ; This section contains meta information for freeciv-ruledit to recreate the ruleset
@@ -18,25 +21,28 @@ options="+Freeciv-2.6-ruleset"
 [ruledit]
 
 ; Which file to read description in from.
-;description_file = ""
+description_file = "experimental/README.experimental"
 
 [about]
 ; Ruleset name
-name = _("Classic ruleset")
+name = _("Experimental ruleset")
 
 ; There`s no separate versioning in rulesets part of main freeciv distribution
 ;version = ""
 
 ; Summary of the ruleset
+; /* TRANS: In the client, this is displayed alongside the contents of
+;    README.experimental, which are not localized. */
 summary = _("\
-You are playing with classic Freeciv ruleset for single player games. \
-Note that in addition to the ruleset, also server settings affect \
-the rules of the game.\
+You are playing with the experimental ruleset. This showcases new or \
+unusual features available in Freeciv without regard for strict game \
+balancing or playability. A description of the differences from the \
+classic ruleset can be found in README.experimental.\
 ")
 
 ; Detailed description
 ; When updating this, update also desciption_file in [ruledit] section to match
-; description = ""
+description = *experimental/README.experimental*
 
 [options]
 global_init_techs=""
@@ -67,10 +73,10 @@ min_city_center_shield  = 1
 min_city_center_trade   = 0
 
 ; Square of initial city radius
-init_city_radius_sq     = 5
+init_city_radius_sq     = 2
 
 ; Square of initially visible radius (true distance).
-init_vis_radius_sq	= 5
+init_vis_radius_sq      = 5
 
 ; A base bribe cost, modified heavily by other factors
 base_bribe_cost  = 750
@@ -116,7 +122,7 @@ civil_war_enabled        = TRUE
 gameloss_style           = ""
 
 ; Whether units may safely paradrop to transport on non-native terrain
-paradrop_to_transport    = FALSE
+paradrop_to_transport    = TRUE
 
 ; Method of paying unit and improvement gold upkeep
 ; "City" - The player`s total gold must be non-negative after paying upkeep
@@ -136,13 +142,11 @@ paradrop_to_transport    = FALSE
 ;            have enough gold, random buildings from random cities are sold.
 ;            If still more gold is needed, then random units with gold
 ;            upkeep are disbanded.
-gold_upkeep_style = "City"
+gold_upkeep_style = "Mixed"
 
 [illness]
 ; Whether plagues (illness) are possible
-; There are some latent building effects in effects.ruleset which affect
-; health, if you enable plague here.
-illness_on = FALSE
+illness_on = TRUE
 
 ; the base factor for illness (of percent)
 illness_base_factor = 25
@@ -190,7 +194,7 @@ tired_attack = FALSE
 ; If force_trade_route is set to TRUE it is illegal for an actor unit to
 ; enter the marketplace of a city if it can establish a trade route to it
 ; in stead.
-force_trade_route = TRUE
+force_trade_route = FALSE
 
 ; What each action should be called when showing them to the player.
 ; The first %s should be before the mnemonic of the action. A Freeciv client
@@ -291,6 +295,20 @@ target_reqs  =
       "NationGroup", "Barbarian", "Player", FALSE
     }
 
+[actionenabler_explorer_establish_embassy]
+action       = "Establish Embassy"
+actor_reqs    =
+    { "type",   "name", "range"
+      "UnitType", "Explorer", "Local"
+      "Tech", "Writing", "Player"
+      "UnitState", "OnLivableTile", "Local"
+      "MinMoveFrags", "1", "Local"
+    }
+target_reqs  =
+    { "type",   "name", "range", "present"
+      "NationGroup", "Barbarian", "Player", FALSE
+    }
+
 [actionenabler_investigate_city]
 action       = "Investigate City"
 actor_reqs    =
@@ -350,7 +368,7 @@ actor_reqs    =
       "UnitState", "OnLivableTile", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
     }
-target_reqs  =
+target_reqs    =
     { "type",   "name", "range", "present"
       "Gov", "Democracy", "Player", FALSE
       "Building", "Palace", "City", FALSE
@@ -371,7 +389,6 @@ target_reqs    =
       "UnitFlag", "Unbribable", "Local", FALSE
       "CityTile", "Center", "Local", FALSE
       "Gov", "Democracy", "Player", FALSE
-      "MaxUnitsOnTile", "1", "Local", TRUE
     }
 
 [actionenabler_sabotage_unit]
@@ -387,7 +404,6 @@ target_reqs    =
     { "type",   "name", "range", "present"
       "CityTile", "Center", "Local", FALSE
       "MinHitPoints", "2", "Local", TRUE
-      "MaxUnitsOnTile", "1", "Local", TRUE
     }
 
 [actionenabler_traderoute]
@@ -471,7 +487,7 @@ tech_leakage = "None"
 ; "Basic"  - upkeep is calculated as:
 ;     <Cost of technology> / tech_upkeep_divider - tech_upkeep_free
 ; "Cities" - upkeep is calculated like "Basic", but multiplied by number of cities
-tech_upkeep_style = "None"
+tech_upkeep_style = "Basic"
 
 ; upkeep cost is divided by this value
 tech_upkeep_divider = 2000
@@ -542,11 +558,6 @@ name           = _("Earthquake")
 frequency      = 10
 effects        = "DestroyBuilding"
 
-[disaster_pestilence]
-name           = _("Pestilence")
-frequency      = 10
-effects        = "ReducePopulation"
-
 [disaster_fire]
 name           = _("Fire")
 frequency      = 10
@@ -560,15 +571,6 @@ reqs           =
     }
 frequency      = 10
 effects        = "ReducePopulation", "Pollution"
-
-[disaster_nuclear_accident]
-name           = _("Nuclear Accident")
-reqs           =
-    { "type", "name", "range"
-      "Building", "Nuclear Plant", "City"
-    }
-frequency      = 10
-effects        = "ReducePopulation", "Fallout"
 
 ; /* <-- avoid gettext warnings
 ;
@@ -594,7 +596,36 @@ effects        = "ReducePopulation", "Fallout"
 ;
 ; */ <-- avoid gettext warnings
 
-; No achievements in classic ruleset
+[achievement_spaceship]
+name           = _("Spaceship Launch")
+type           = "Spaceship"
+first_msg      = _("You're the first one to launch a spaceship towards Alpha Centauri!");
+cons_msg       = _("You have launched a spaceship towards Alpha Centauri!")
+
+[achievement_map_known]
+name           = _("Entire Map Known")
+type           = "Map_Known"
+value          = 100
+first_msg      = _("You're the first one to have mapped the entire world!")
+cons_msg       = _("You have mapped the entire world!")
+
+[achievement_map_known_20p]
+; /* xgettext:no-c-format */
+name           = _("Map Known 20%")
+rule_name      = "Map Known 20 pct"
+type           = "Map_Known"
+value          = 20
+; /* xgettext:no-c-format */
+first_msg      = _("You're the first one to have 20% of the world mapped!")
+; /* xgettext:no-c-format */
+cons_msg       = _("You have 20% of the world mapped!")
+
+[achievement_another_island]
+name          = _("Land Ahoy")
+type          = "Land_Ahoy"
+value         = 2
+first_msg     = _("As the first people in history, your people sight a foreign shore!")
+cons_msg      = _("You sight your first foreign shore!")
 
 ;
 ; Trade settings
@@ -687,7 +718,7 @@ colorlist =
 ; etc...
 
 [settings]
-; freeciv game settings for the classic ruleset
+; freeciv game settings for the experimental ruleset
 ;
 ; set =
 ;     { "name", "value", "lock"
@@ -695,3 +726,22 @@ colorlist =
 ;       "int_set", 123, FALSE
 ;       "str_set", "test", FALSE
 ;     }
+set =
+    { "name", "value", "lock"
+      "migration", TRUE, TRUE
+      "mgr_turninterval", 3, FALSE
+      "mgr_foodneeded", TRUE, FALSE
+      "mgr_distance", 3, FALSE
+      "mgr_nationchance", 75, FALSE
+      "mgr_worldchance", 25, FALSE
+      "foggedborders", TRUE, FALSE
+      "techlost_recv", 5, FALSE
+      "techlost_donor", 3, FALSE
+      "ec_turns", 9, FALSE
+      "ec_max_size", 100, FALSE
+      "ec_chat", TRUE, FALSE
+      "ec_info", TRUE, FALSE
+      "techlossforgiveness", 15, FALSE
+      "traitdistribution", "EVEN", FALSE
+      "victories", "SPACERACE|ALLIED|CULTURE", FALSE
+    }

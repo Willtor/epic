@@ -1,3 +1,5 @@
+; This is the experimental ruleset. See README.experimental
+; for a detailed description.
 
 ; Modifying this file:
 ; You should not modify this file except to make bugfixes or
@@ -11,7 +13,7 @@
 ; than minor changes.
 
 [datafile]
-description="Classic governments data for Freeciv (as Civ2, minus fundamentalism)"
+description="Experimental governments data for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 [governments]
@@ -71,6 +73,8 @@ Anarchy is simply the absence of any recognizable government.\
 "), _("\
 Anarchy offers slightly less corruption than Despotism,\
  but slightly more unhappiness.\
+"), _("\
+Under Anarchy, technology cannot be lost due to lack of upkeep.\
 ")
 
 ;------------------------------------------------------------------------
@@ -206,3 +210,16 @@ Under Democracy, citizens govern directly by voting on issues.\
 ;                           newlines so that xgettext parsing works
 ;
 ; */ <-- avoid gettext warnings
+
+[multiplier_personal_freedom]
+name      = _("Personal Freedom")
+start     = 0
+stop      = 5
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of personal freedom you allow your citizens yields a 10% \
+increase in science output, but makes an additional citizen unhappy \
+for every aggressively deployed military unit.\
+")

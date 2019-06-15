@@ -1,3 +1,5 @@
+; This is the experimental ruleset. See doc/README.experimental
+; for a detailed description.
 
 ; Modifying this file:
 ; You should not modify this file except to make bugfixes or
@@ -11,7 +13,7 @@
 ; than minor changes.
 
 [datafile]
-description="Classic tile_type data for Freeciv"
+description="Experimental terrain data for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 [control]
@@ -54,10 +56,10 @@ min_start_native_area = 0
 
 ; How many fragments each movement point has.
 ; For example road movement costs are relative to this.
-move_fragments = 3
+move_fragments = 9
 
 ; How many move_fragments IgTer unit movement costs
-igter_cost = 1
+igter_cost = 3
 
 ; Whether diagonal movement has increased cost (no effect with hex topology)
 ; The cost increase is more accurate with larger values for move_fragments
@@ -246,8 +248,6 @@ food                 = 1
 shield               = 0
 trade                = 2
 resources            = "Fish"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 0
@@ -289,8 +289,6 @@ food                 = 1
 shield               = 0
 trade                = 2
 resources            = "Fish", "Whales"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 0
@@ -333,8 +331,6 @@ food                 = 1
 shield               = 0
 trade                = 2
 ;resources            = "none"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 0
@@ -377,8 +373,6 @@ food                 = 0
 shield               = 0
 trade                = 0
 resources            = "Ivory", "Oil"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -398,7 +392,7 @@ warmer_wetter_result = "Tundra"
 warmer_drier_result  = "Tundra"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
-native_to            = "Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Big Land", "Air", "Missile", "Helicopter"
 flags                = "NoBarbs", "NoCities", "CanHaveRiver", "Oil", "Frozen"
 property_frozen      = 100
 color.r              = 232
@@ -424,8 +418,6 @@ food                 = 0
 shield               = 1
 trade                = 0
 resources            = "Oasis", "Oil"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
@@ -445,7 +437,7 @@ warmer_wetter_result = "Grassland"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Plains"
 cooler_drier_result  = "Tundra"
-native_to            = "Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Big Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver", "Oil"
 property_dry         = 100
 property_tropical    = 50
@@ -472,8 +464,6 @@ food                 = 1
 shield               = 2
 trade                = 0
 resources            = "Pheasant", "Silk"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -519,8 +509,6 @@ food                 = 2
 shield               = 0
 trade                = 0
 resources            = "Resources"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
@@ -540,7 +528,7 @@ warmer_wetter_result = "Lake"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "Tundra"
-native_to            = "Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Big Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
 property_temperate   = 50
@@ -563,8 +551,6 @@ food                 = 1
 shield               = 0
 trade                = 0
 resources            = "Coal", "Wine"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -608,8 +594,6 @@ food                 = 1
 shield               = 0
 trade                = 0
 resources            = "Gems", "Fruit"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -654,8 +638,6 @@ food                 = 0
 shield               = 1
 trade                = 0
 resources            = "Gold", "Iron"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 6
@@ -698,8 +680,6 @@ food                 = 1
 shield               = 1
 trade                = 0
 resources            = "Buffalo", "Wheat"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
@@ -719,7 +699,7 @@ warmer_wetter_result = "Lake"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "Tundra"
-native_to            = "Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Big Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
 property_temperate   = 50
@@ -743,8 +723,6 @@ food                 = 1
 shield               = 0
 trade                = 0
 resources            = "Peat", "Spice"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -790,8 +768,6 @@ food                 = 1
 shield               = 0
 trade                = 0
 resources            = "Game", "Furs"
-road_food_incr_pct   = 0
-road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 2
@@ -811,7 +787,7 @@ warmer_wetter_result = "Lake"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "no"
-native_to            = "Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Big Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "NoBarbs", "CanHaveRiver"
 property_cold        = 50
 color.r              = 188
@@ -1055,12 +1031,12 @@ ui_name_base_airbase = _("?gui_type:Build Airbase")
 ; graphic_alt             = tag for alternate graphic if preferred graphic is
 ;                           not present. Can use eg "-" for no alternate
 ;                           graphic
-; activity_gfx            = tag specifying graphic for unit building extra.
+; activity_gfx            = tag specifying graphic for unit building extra
 ;                           This can be "None" to indicate that graphic sprite
 ;                           is not needed.
 ; act_gfx_alt             = tag for alternative graphic for unit building extra
 ; act_gfx_alt2            = tag for second alternative graphic for unit building extra
-; rmact_gfx               = tag specifying graphic for unit removing extra.
+; rmact_gfx               = tag specifying graphic for unit removing extra
 ;                           This can be "None" to indicate that graphic sprite
 ;                           is not needed.
 ; rmact_gfx_alt           = tag for alternative graphic for unit removing extra
@@ -1346,8 +1322,7 @@ removal_time   = 0
 flags          = "NuclearWinter"
 helptext       = _("\
 Nuclear fallout can appear on land tiles when a Nuclear unit is \
-detonated, or when a city's Nuclear Plant has an accident. It halves \
-all output from its tile.\
+detonated. It halves all output from its tile.\
 "), _("\
 Every tile with nuclear fallout also increases the risk of global \
 nuclear winter. If nuclear winter occurs, land across the globe \
@@ -1378,7 +1353,7 @@ reqs           =
 build_time     = 3
 removal_time   = 0
 defense_bonus  = 100
-native_to      = "Land"
+native_to      = "Land", "Big Land"
 helptext       = _("\
 Fortresses improve defense for land units outside cities. Among other \
 effects, a land unit remaining in a fortress for a whole turn without \
@@ -1485,12 +1460,14 @@ reqs           =
     }
 build_time     = 0
 removal_time   = 0
-native_to      = "Land"
-hidden_by      = "Railroad"
-flags          = "AutoOnCityCenter"
+native_to      = "Land", "Big Land"
+flags          = "NativeTile", "AutoOnCityCenter"
+hidden_by      = "Railroad", "Maglev"
 helptext       = _("\
-Roads allow your land units to move more quickly, and on some terrain,\
- also provide a trade bonus.\
+Roads allow your land units to move more quickly, and allow heavy\
+ Big Land units such as Catapults and Freight to travel through\
+ otherwise difficult terrain such as Mountains and Forest. On some\
+ terrain, roads also provide a trade bonus.\
 "), _("\
 Building roads on river tiles requires knowledge of Bridge Building.\
  City center tiles automatically get roads (unless they are on a river\
@@ -1518,12 +1495,13 @@ reqs           =
     }
 build_time     = 3
 removal_time   = 0
-native_to      = "Land"
-flags          = "AutoOnCityCenter"
+native_to      = "Land", "Big Land"
+flags          = "NativeTile", "AutoOnCityCenter"
+hidden_by      = "Maglev"
 helptext       = _("\
 Once you learn the Railroad technology, you may upgrade your roads\
- to railroads. Units expend no movement points when moving along a\
- railroad; you may ride a railroad indefinitely. (As may your enemies!)\
+ to railroads. Units travel considerably faster along railroads than\
+ along roads.\
 "), _("\
 A railroad also increases any shield resources produced by a tile.\
  A tile whose road is upgraded to a railroad retains any trade bonus\
@@ -1531,6 +1509,42 @@ A railroad also increases any shield resources produced by a tile.\
 "), _("\
 City center tiles with roads are automatically upgraded to railroads\
  when you learn the Railroad technology.\
+")
+
+[extra_maglev]
+name           = _("Maglev")
+category       = "Infra"
+causes         = "Road"
+rmcauses       = "Pillage"
+graphic        = "road.maglev"
+graphic_alt    = "road.rail"
+activity_gfx   = "unit.maglev"
+act_gfx_alt    = "unit.road"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range"
+      "Tech", "Superconductors", "Player"
+      "Extra", "Railroad", "Local"
+      "UnitFlag", "Settlers", "Local"
+      "TerrainClass", "Land", "Local"
+    }
+build_time     = 3
+removal_time   = 0
+native_to      = "Land"
+flags          = "NativeTile", "AutoOnCityCenter"
+helptext       = _("\
+With sufficient technology, you may build magnetic levitation systems\
+ along your railroad routes. Land units expend no movement points\
+ when riding a maglev; you may ride indefinitely. (As may your enemies!)\
+"), _("\
+Your regular railroads are still used to carry heavy Big Land\
+ units for which the maglev system is unsuitable, and they continue\
+ to provide production and trade bonuses.\
+"), _("\
+City center tiles with railroads are automatically upgraded to maglev\
+ when you learn about Superconductors.\
 ")
 
 [extra_river]
@@ -1547,15 +1561,20 @@ rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 buildable      = FALSE
 defense_bonus  = 50
-native_to      = "Land"
+native_to      = "Land", "Big Land", "Trireme"
+flags          = "NativeTile"
 ; /* xgettext:no-c-format */
 helptext       = _("\
-Any land terrain type may have a River on it.  A River adds 1\
- trade to the resources produced by that tile.  It also increases a tile's\
- defense factor by 50%.  Finally, land units may move along a River (but\
- not diagonally) for fast travel.\
+Any land terrain type may have a River on it. A River adds 1\
+ trade to the resources produced by that tile. It also increases a tile's\
+ defense factor by 50%.\
 "), _("\
-Roads and railroads can only be built on River tiles if your\
+Land units may move along rivers for faster travel (but not diagonally),\
+ and heavy Big Land units such as Catapults and Freight may travel\
+ along them through otherwise difficult terrain. Triremes may also\
+ travel up rivers (although later boats cannot).\
+"), _("\
+Roads, railroads, and maglev can only be built on River tiles if your\
  civilization has learned Bridge Building technology.\
 ")
 
@@ -1620,7 +1639,7 @@ gui_type       = "Other"
 ;                           README.effects for help on requirements)
 ; move_cost               = how much movement it takes to travel
 ;                           via this road (in fractional move points, as
-;                           defined by move_fragments).
+;                           defined by move_fragments)
 ;                           -1 means that road provides no speed bonus.
 ; move_mode               = how movement costs are applied
 ;   - "Cardinal"   = Road cost applies only on cardinal moves
@@ -1670,7 +1689,7 @@ gui_type       = "Other"
 
 [road_road]
 extra          = "Road"
-move_cost      = 1
+move_cost      = 3
 food_incr      = 0
 shield_incr    = 0
 trade_incr     = 1
@@ -1682,7 +1701,7 @@ flags          = "RequiresBridge"
 
 [road_railroad]
 extra          = "Railroad"
-move_cost      = 0
+move_cost      = 1
 food_incr      = 0
 shield_incr    = 0
 trade_incr     = 0
@@ -1692,18 +1711,21 @@ trade_bonus    = 0
 compat_special = "Railroad"
 flags          = "RequiresBridge"
 
+[road_maglev]
+extra          = "Maglev"
+move_cost      = 0
+food_incr      = 0
+shield_incr    = 0
+trade_incr     = 0
+food_bonus     = 0
+shield_bonus   = 0
+trade_bonus    = 0
+flags          = "RequiresBridge"
+
 [road_river]
 extra          = "River"
-move_cost      = 1
+move_cost      = 3
 move_mode      = "Cardinal"
-food_incr_const   = 0
-shield_incr_const = 0
-trade_incr_const  = 1
-food_incr         = 0
-shield_incr       = 0
-trade_incr        = 0
-food_bonus        = 0
-shield_bonus      = 0
-trade_bonus       = 0
+trade_incr_const = 1
 compat_special = "River"
 flags          = "River", "PreventsOtherRoads", "UnrestrictedInfra"

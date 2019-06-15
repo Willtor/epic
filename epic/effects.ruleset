@@ -1,3 +1,6 @@
+; This is the experimental ruleset. See README.experimental
+; for a detailed description.
+
 ; Modifying this file:
 ; You should not modify this file except to make bugfixes or
 ; for other "maintenance".  If you want to make custom changes,
@@ -10,7 +13,7 @@
 ; than minor changes.
 
 [datafile]
-description="Classic effects data for Freeciv"
+description="Experimental effects data for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 ; /* <-- avoid gettext warnings
@@ -101,7 +104,7 @@ reqs    =
     }
 
 
-; Vision benefit from fortress watchtowers
+; Vision benefit from fortress watchtowers to Land units
 [effect_fortress_vision]
 type    = "Unit_Vision_Radius_Sq"
 value   = 8
@@ -112,13 +115,24 @@ reqs    =
       "UnitClass", "Land", "Local"
     }
 
+; Vision benefit from fortress watchtowers to Big Land units
+[effect_fortress_vision_bl]
+type    = "Unit_Vision_Radius_Sq"
+value   = 8
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Fortress", "tile"
+      "Tech", "Invention", "player"
+      "UnitClass", "Big Land", "Local"
+    }
+
 ; basic free tech upkeep
 [effect_upkeep_tech_free]
 type    = "Tech_Upkeep_Free"
-value   = 3
+value   = 99
 
 ; Fortress HP regen
-[effect_fortress_hp_regen]
+[effect_fortress_hp_regen_land]
 type    = "HP_Regen"
 value   = 25
 reqs    =
@@ -127,29 +141,13 @@ reqs    =
       "UnitClass", "Land", "Local"
     }
 
-; Base vision range - radius of vision is sqrt(5) = 2.24
-[effect_city_vision]
-type    = "City_Vision_Radius_Sq"
-value   = 5
-
-[effect_trade_routes_base]
-type    = "Max_Trade_Routes"
-value   = 2
-
-[effect_trade_routes_magnetism]
-type    = "Max_Trade_Routes"
-value   = 1
-reqs	=
+[effect_fortress_hp_regen_big_land]
+type    = "HP_Regen"
+value   = 25
+reqs    =
     { "type", "name", "range"
-      "Tech", "Magnetism", "Player"
-    }
-
-[effect_trade_routes_corporation]
-type    = "Max_Trade_Routes"
-value   = 1
-reqs	=
-    { "type", "name", "range"
-      "Tech", "The Corporation", "Player"
+      "Extra", "Fortress", "Tile"
+      "UnitClass", "Big Land", "Local"
     }
 
 ; Nuclear power gives +1 moves to sea units
@@ -184,6 +182,82 @@ value	= 1
 reqs	=
     { "type", "name", "range"
       "Gov", "Republic", "Player"
+    }
+
+[effect_migration_anarchy]
+type    = "Migration_Pct"
+value	= -10
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+    }
+
+[effect_migration_despotism]
+type    = "Migration_Pct"
+value	= -10
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+    }
+
+[effect_migration_monarchy]
+type    = "Migration_Pct"
+value	= -10
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+    }
+
+[effect_migration_communism]
+type    = "Migration_Pct"
+value	= -10
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+    }
+
+[effect_migration_republic]
+type    = "Migration_Pct"
+value	= 10
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+    }
+
+[effect_migration_democracy]
+type    = "Migration_Pct"
+value	= 20
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+    }
+
+[effect_base_enemy_unhappiness]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = 0
+
+[effect_enemy_unhappiness_communism]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -50
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+    }
+
+[effect_enemy_unhappiness_republic]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -50
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+    }
+
+[effect_enemy_unhappiness_democracy]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -67
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
     }
 
 [effect_corruption_anarchy0]
@@ -303,6 +377,23 @@ value	= 2
 reqs   =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
+    }
+
+[effect_personal_freedom_unit_unhappiness]
+type    = "Unhappy_Factor"
+value   = 1
+multiplier = "Personal Freedom"
+reqs   =
+    { "type", "name", "range"
+    }
+
+[effect_personal_freedom_science_bonus]
+type    = "Output_Bonus_2"
+value   = 10
+multiplier = "Personal Freedom"
+reqs   =
+    { "type", "name", "range"
+      "OutputType", "Science", "Local"
     }
 
 [effect_upkeep_free_units_anarchy]
@@ -788,12 +879,21 @@ reqs	=
       "Building", "Aqueduct", "City"
     }
 
-[effect_aqueduct_health]
+[effect_aqueduct_health_1]
 type    = "Health_Pct"
-value	= 50
+value	= 30
 reqs	=
     { "type", "name", "range"
       "Building", "Aqueduct", "City"
+    }
+
+[effect_aqueduct_health_2]
+type    = "Health_Pct"
+value   = 20
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Aqueduct", "City", TRUE
+      "Tech", "Industrialization", "Player", FALSE
     }
 
 [effect_bank]
@@ -827,6 +927,17 @@ reqs	=
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
+[effect_barracks_bl]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 [effect_barracks_1]
 type    = "HP_Regen"
 value	= 100
@@ -834,6 +945,15 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "Barracks", "City", TRUE
       "UnitClass", "Land", "Local", TRUE
+    }
+
+[effect_barracks_bl_1]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
     }
 
 [effect_barracks_ii]
@@ -847,6 +967,17 @@ reqs	=
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
+[effect_barracks_ii_bl]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks II", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 [effect_barracks_ii_1]
 type    = "HP_Regen"
 value	= 100
@@ -854,6 +985,15 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "Barracks II", "City", TRUE
       "UnitClass", "Land", "Local", TRUE
+    }
+
+[effect_barracks_ii_bl_1]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks II", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
     }
 
 [effect_barracks_iii]
@@ -867,6 +1007,17 @@ reqs	=
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
+[effect_barracks_iii_bl]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks III", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 [effect_barracks_iii_1]
 type    = "HP_Regen"
 value	= 100
@@ -874,6 +1025,15 @@ reqs	=
     { "type", "name", "range"
       "Building", "Barracks III", "City"
       "UnitClass", "Land", "Local"
+    }
+
+[effect_barracks_iii_bl_1]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks III", "City"
+      "UnitClass", "Big Land", "Local"
     }
 
 [effect_cathedral]
@@ -905,7 +1065,7 @@ reqs	=
       "Building", "Michelangelo's Chapel", "Player", FALSE
     }
 
-[effect_city_walls]
+[effect_city_walls_land_defense]
 type    = "Defend_Bonus"
 value	= 200
 reqs	=
@@ -913,10 +1073,20 @@ reqs	=
       "Building", "City Walls", "City", TRUE
       "UnitClass", "Land", "Local", TRUE
       "Building", "Great Wall", "Player", FALSE
+    }
+
+[effect_city_walls_big_land_defense]
+type    = "Defend_Bonus"
+value	= 200
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "City Walls", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
+      "Building", "Great Wall", "Player", FALSE
       "UnitType", "Howitzer", "Local", FALSE
     }
 
-[effect_city_walls_0]
+[effect_city_walls_heli_defense]
 type    = "Defend_Bonus"
 value	= 200
 reqs	=
@@ -974,6 +1144,14 @@ value	= 1
 reqs	=
     { "type", "name", "range"
       "Tech", "Electricity", "Player"
+      "Building", "Colosseum", "City"
+    }
+
+[effect_colosseum_culture]
+type    = "History"
+value	= 1
+reqs	=
+    { "type", "name", "range"
       "Building", "Colosseum", "City"
     }
 
@@ -1059,6 +1237,14 @@ reqs	=
       "OutputType", "Food", "Local"
     }
 
+[effect_hospital_health]
+type   = "Health_Pct"
+value  = 25
+reqs   =
+    {"type", "name", "range"
+     "Building", "Hospital", "City"
+    }
+
 [effect_hydro_plant]
 type    = "Output_Bonus"
 value	= 25
@@ -1111,6 +1297,24 @@ reqs	=
       "Building", "Solar Plant", "City", FALSE
     }
 
+[effect_genetic_lab_health]
+type   = "Health_Pct"
+value  = 20
+reqs   =
+    {"type", "name", "range"
+     "Building", "Genetic Lab", "City"
+    }
+
+[effect_genetic_lab_food]
+type    = "Output_Bonus"
+value	= 25
+reqs	=
+    { "type", "name", "range"
+      "Building", "Genetic Lab", "City"
+      "MinSize", "21", "City"
+      "OutputType", "Food", "Local"
+    }
+
 [effect_library]
 type    = "Output_Bonus"
 value	= 100
@@ -1118,6 +1322,14 @@ reqs	=
     { "type", "name", "range"
       "Building", "Library", "City"
       "OutputType", "Science", "Local"
+    }
+
+[effect_library_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Library", "City"
     }
 
 [effect_marketplace]
@@ -1309,6 +1521,14 @@ reqs =
       "Gov", "Monarchy", "Player"
       "Building", "Palace", "City"
       "OutputType", "Shield", "Local"
+    }
+
+[effect_palace_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Palace", "City"
     }
 
 [effect_police_station]
@@ -1511,7 +1731,7 @@ reqs	=
 
 [effect_sewer_system_health]
 type    = "Health_Pct"
-value	= 30
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Aqueduct", "City"
@@ -1711,6 +1931,14 @@ reqs	=
       "Building", "Temple", "City"
     }
 
+[effect_temple_2]
+type    = "Health_Pct"
+value   = 20
+reqs    =
+    { "type", "name", "range"
+      "Building", "Temple", "City"
+    }
+
 [effect_university]
 type    = "Output_Bonus"
 value	= 150
@@ -1719,6 +1947,14 @@ reqs	=
       "Building", "Library", "City"
       "Building", "University", "City"
       "OutputType", "Science", "Local"
+    }
+
+[effect_university_culture]
+type    = "History"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "University", "City"
     }
 
 [effect_apollo_program]
@@ -1773,7 +2009,7 @@ reqs	=
 
 [effect_cure_for_cancer_health]
 type    = "Health_Pct"
-value	= 20
+value	= 5
 reqs	=
     { "type", "name", "range"
       "Building", "Cure For Cancer", "Player"
@@ -1803,18 +2039,28 @@ reqs	=
       "Building", "Great Library", "Player"
     }
 
-[effect_great_wall]
+[effect_great_wall_land_defense]
+type    = "Defend_Bonus"
+value	= 200
+reqs	=
+    { "type", "name", "range"
+      "Building", "Great Wall", "Player"
+      "UnitClass", "Land", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_great_wall_big_land_defense]
 type    = "Defend_Bonus"
 value	= 200
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Great Wall", "Player", TRUE
-      "UnitClass", "Land", "Local", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
       "CityTile", "Center", "Local", TRUE
       "UnitType", "Howitzer", "Local", FALSE
     }
 
-[effect_great_wall_0]
+[effect_great_wall_heli_defense]
 type    = "Defend_Bonus"
 value	= 200
 reqs	=
@@ -2089,7 +2335,7 @@ reqs	=
       "Building", "Statue of Liberty", "Player"
     }
 
-[effect_sun_tzus_war_academy]
+[effect_sun_tzus_land_veteran]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -2100,13 +2346,34 @@ reqs	=
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
-[effect_sun_tzus_war_academy_1]
+[effect_sun_tzus_big_land_veteran]
+type    = "Veteran_Build"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Sun Tzu's War Academy", "Player", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_sun_tzus_land_combat_vet]
 type    = "Veteran_Combat"
 value	= 50
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Sun Tzu's War Academy", "Player", TRUE
       "UnitClass", "Land", "Local", TRUE
+      "UnitFlag", "Diplomat", "Local", FALSE
+    }
+
+[effect_sun_tzus_big_land_combat_vet]
+type    = "Veteran_Combat"
+value	= 50
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Sun Tzu's War Academy", "Player", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
       "UnitFlag", "Diplomat", "Local", FALSE
     }
 
@@ -2150,6 +2417,14 @@ value   = -585
 reqs    =
     { "type", "name", "range"
       "Tech", "Railroad", "Player"
+    }
+
+[effect_upkeep_shield2gold]
+type    = "Shield2Gold_Factor"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Tech", "The Corporation", "Player"
     }
 
 [effect_calendar_base]
@@ -2228,12 +2503,65 @@ reqs    =
 type    = "City_Build_Slots"
 value   = 1
 
+[effect_trade_routes]
+type    = "Max_Trade_Routes"
+value   = 2
+
+[effect_trade_routes_magnetism]
+type    = "Max_Trade_Routes"
+value   = 1
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Magnetism", "Player"
+    }
+
+[effect_trade_routes_corporation]
+type    = "Max_Trade_Routes"
+value   = 1
+reqs	=
+    { "type", "name", "range"
+      "Tech", "The Corporation", "Player"
+    }
+
+; Base vision range - radius of vision is sqrt(2) = 1.41
+[effect_city_vision_0]
+type    = "City_Vision_Radius_Sq"
+value   = 2
+
+; City radius 2 - radius is sqrt(2+3) = 2.24
+[effect_city_radius_1]
+type    = "City_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "3", "City"
+    }
+
 [effect_city_image_1]
 type    = "City_Image"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "MinSize", "4", "City"
+      "MinSize", "3", "City"
+    }
+
+; City radius 2 - radius of vision is sqrt(2+3) = 2.24
+[effect_city_vision_1]
+type    = "City_Vision_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "3", "City"
+    }
+
+; City radius 3 - radius is sqrt(2+3+5) = 3.16
+[effect_city_radius_2]
+type    = "City_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "10", "City"
+      "Tech", "Railroad", "Player"
     }
 
 [effect_city_image_2]
@@ -2241,7 +2569,40 @@ type    = "City_Image"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "MinSize", "8", "City"
+      "MinSize", "10", "City"
+      "Tech", "Railroad", "Player"
+    }
+
+; City radius 3 - radius of vision is sqrt(2+3+5) = 3.16
+[effect_city_vision_2]
+type    = "City_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "10", "City"
+      "Tech", "Railroad", "Player"
+    }
+
+; City radius 3 - (1)+1 build slots
+[effect_city_build_slots_3]
+type    = "City_Build_Slots"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "10", "City"
+      "Tech", "Railroad", "Player"
+    }
+
+; City radius 4 - radius is sqrt(2+3+5+7) = 4.12
+[effect_city_radius_3]
+type    = "City_Radius_Sq"
+value   = 8
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "30", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
     }
 
 [effect_city_image_3]
@@ -2249,7 +2610,34 @@ type    = "City_Image"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "MinSize", "12", "City"
+      "MinSize", "30", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
+    }
+
+; City radius 4 - radius of vision is sqrt(2+3+5+7) = 4.12
+[effect_city_vision_3]
+type    = "City_Vision_Radius_Sq"
+value   = 8
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "30", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
+    }
+
+; City radius 4 - (1+1)+1 build slots
+[effect_city_build_slots_4]
+type    = "City_Build_Slots"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "30", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
     }
 
 [effect_city_image_4]
@@ -2257,7 +2645,10 @@ type    = "City_Image"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "MinSize", "16", "City"
+      "MinSize", "50", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
     }
 
 [effect_irrigate_src_ocean]
@@ -2341,7 +2732,7 @@ value	= 50
 reqs	=
     { "type", "name", "range", "present"
       "Extra", "Fallout", "Local", TRUE
-     "Extra", "Pollution", "Local", FALSE
+      "Extra", "Pollution", "Local", FALSE
     }
 
 [effect_pollution_fallout]
