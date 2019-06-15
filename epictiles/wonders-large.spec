@@ -40,6 +40,9 @@ artists = "
   Hajor
   b.seti_program
 
+  Locutus
+  b.teslas_lab
+
   PD images
   b.apollo_program
   b.eiffel_tower
@@ -87,6 +90,7 @@ sprites =
                 "b.statue_of_zeus", "wonders/statue_of_zeus"
 		"b.sun_tzus_war_academy", "wonders/sun_tzus_war_academy"
                 "b.temple_of_artemis", "wonders/temple_of_artemis"
+                "b.teslas_lab", "wonders/teslas_lab"
 		"b.united_nations", "wonders/united_nations"
 		"b.womens_suffrage", "wonders/womens_suffrage"
 	}
