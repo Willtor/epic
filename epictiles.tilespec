@@ -108,7 +108,7 @@ files =
   "amplio2/veterancy.spec",
   "misc/flags-large.spec",
   "misc/buildings-large.spec",
-  "misc/wonders-large.spec",
+  "epictiles/wonders-large.spec",
   "misc/space.spec",
   "misc/techs.spec",
   "misc/treaty.spec",
