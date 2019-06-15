@@ -1523,7 +1523,7 @@ graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Automobile", "World", TRUE
+      "Tech", "Electricity", "World", TRUE
     }
 build_cost	= 400
 upkeep		= 0
@@ -1532,6 +1532,27 @@ sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
 Upgrades one obsolete unit per game turn.\
+")
+
+[building_teslas_lab]
+name		= _("Tesla's Laboratory")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electricity", "Player"
+    }
+graphic	= "b.teslas_lab"
+graphic_alt	= "b.leonardos_workshop"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_leonardos_workshop"
+sound_alt	= "w_generic"
+helptext	= _("\
+Upgrades two obsolete units per game turn.\
 ")
 
 [building_lighthouse]
