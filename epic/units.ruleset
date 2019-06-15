@@ -827,7 +827,7 @@ A number of Partisans are granted free when an enemy conquers your\
 name          = _("Alpine Troops")
 class         = "Land"
 tech_req      = "Tactics"
-obsolete_by   = "None"
+obsolete_by   = "Super Soldiers"
 graphic       = "u.alpine_troops"
 graphic_alt   = "-"
 sound_move    = "m_alpine_troops"
@@ -859,7 +859,7 @@ Alpine Troops are highly mobile units as well as\
 name          = _("Riflemen")
 class         = "Land"
 tech_req      = "Conscription"
-obsolete_by   = "None"
+obsolete_by   = "Super Soldiers"
 graphic       = "u.riflemen"
 graphic_alt   = "-"
 sound_move    = "m_riflemen"
@@ -887,11 +887,47 @@ Riflemen are World War-era infantry, very good\
  at defending your cities.\
 ")
 
+[unit_super_soldiers]
+name          = _("Super Soldiers")
+class         = "Land"
+tech_req      = "Cybernetics"
+obsolete_by   = "None"
+graphic       = "u.future_soldier"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 8
+defense       = 5
+hitpoints     = 25
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = "Marines", "Paratroopers", "IgTer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Super soldiers are cybernetically enhanced to operate at peak\
+ operating efficiency in all tasks required by human beings.\
+ In combat they have no equal.\
+")
+paratroopers_range = 12
+paratroopers_mr_req = 1
+paratroopers_mr_sub = 0
+
 [unit_marines]
 name          = _("Marines")
 class         = "Land"
 tech_req      = "Amphibious Warfare"
-obsolete_by   = "None"
+obsolete_by   = "Super Soldiers"
 graphic       = "u.marines"
 graphic_alt   = "-"
 sound_move    = "m_marines"
@@ -922,7 +958,7 @@ Marines are infantry who are experts at marine warfare.\
 name          = _("Paratroopers")
 class         = "Land"
 tech_req      = "Combined Arms"
-obsolete_by   = "None"
+obsolete_by   = "Super Soldiers"
 graphic       = "u.paratroopers"
 graphic_alt   = "-"
 sound_move    = "m_paratroopers"
@@ -1155,7 +1191,7 @@ Cavalry are mounted and highly trained soldiers.\
 name          = _("Armor")
 class         = "Big Land"
 tech_req      = "Mobile Warfare"
-obsolete_by   = "None"
+obsolete_by   = "Hovertank"
 graphic       = "u.armor"
 graphic_alt   = "-"
 sound_move    = "m_armor"
@@ -1182,6 +1218,39 @@ helptext      = _("\
 Armors are motorized war wagons that are faster,\
  stronger, and can take more damage than any\
  mounted unit.\
+")
+
+[unit_hovertank]
+name          = _("Hovertank")
+class         = "Land"
+tech_req      = "VTOL"
+obsolete_by   = "None"
+graphic       = "u.hovertank"
+graphic_alt   = "u.armor"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 12
+defense       = 6
+hitpoints     = 30
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = "IgTer"
+roles         = "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Hovertanks navigate the battlefield and cover terrain\
+ with astonishing agility and speed.  These represent\ 
+ the final word in ground war weapons.\
 ")
 
 [unit_catapult]
@@ -1500,6 +1569,42 @@ roles         = ""
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
  radius.\
+")
+
+[unit_uav]
+name          = _("UAV")
+class         = "Air"
+tech_req      = "Artificial Intelligence"
+obsolete_by   = "None"
+graphic       = "u.drone"
+graphic_alt   = "u.bomber"
+sound_move    = "m_stealth_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 16
+defense       = 1
+hitpoints     = 15
+firepower     = 2
+move_rate     = 12
+vision_radius_sq = 20
+transport_cap = 0
+fuel          = 4
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker",
+                "HasNoZOC"
+roles         = ""
+helptext      = _("\
+A UAV (or drone) allows a controller to operate\
+ an aircraft from hundreds or thousands of miles\
+ away in safety.  AI allows the craft to manage\
+ a lot of the functions of flight so that it can\
+ remain airborn for extended periods of time.\
 ")
 
 [unit_trireme]
