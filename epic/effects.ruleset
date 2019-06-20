@@ -2636,6 +2636,15 @@ reqs    =
       "Building", "Super Highways", "City"
     }
 
+; City radius 4 - radius of vision is sqrt(2+3+5+7) = 4.12
+[effect_city_vision_inf]
+type    = "City_Vision_Radius_Sq"
+value   = 6535
+reqs    =
+    { "type", "name", "range"
+      "Building", "Spy Satellite Network", "City"
+    }
+
 ; City radius 4 - (1+1)+1 build slots
 [effect_city_build_slots_4]
 type    = "City_Build_Slots"

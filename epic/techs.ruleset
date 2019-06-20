@@ -516,6 +516,14 @@ flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
 
+[advance_mass_communication]
+name     = _("Mass Communication")
+req1     = "Superconductors"
+req2     = "Space Flight"
+root_req = "Space Flight"
+graphic     = "a.computers"
+graphic_alt = "-"
+
 [advance_mass_production]
 name     = _("Mass Production")
 req1     = "Automobile"
