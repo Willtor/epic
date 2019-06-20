@@ -1534,27 +1534,6 @@ helptext	= _("\
 Upgrades one obsolete unit per game turn.\
 ")
 
-[building_teslas_lab]
-name		= _("Tesla's Laboratory")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Electricity", "Player"
-    }
-graphic	= "b.teslas_lab"
-graphic_alt	= "b.leonardos_workshop"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_leonardos_workshop"
-sound_alt	= "w_generic"
-helptext	= _("\
-Upgrades two obsolete units per game turn.\
-")
-
 [building_lighthouse]
 name		= _("Lighthouse")
 genus		= "GreatWonder"
@@ -1581,10 +1560,10 @@ Gives all your sea units 1 additional movement point. Makes all your\
 
 [building_magellans_expedition]
 name		= _("Magellan's Expedition")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Navigation", "Player"
+      "Tech", "Magnetism", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
     }
 graphic	= "b.magellans_expedition"
@@ -1809,6 +1788,27 @@ All your new military land units start with an additional veteran level\
  (this is cumulative with any Barracks building in a city; with both, units\
  are created as Hardened). The chance of a land unit getting the next\
  veteran level after a battle increases by half.\
+")
+
+[building_teslas_lab]
+name		= _("Tesla's Laboratory")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electricity", "Player"
+    }
+graphic	= "b.teslas_lab"
+graphic_alt	= "b.leonardos_workshop"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_leonardos_workshop"
+sound_alt	= "w_generic"
+helptext	= _("\
+Upgrades two obsolete units per game turn.\
 ")
 
 [building_united_nations]
