@@ -1890,6 +1890,29 @@ Counts as a Police Station in every city. (That is, for each city, it\
 ; For Civ2 this should reduce unhappiness by one for *each* unit
 ; outside a city that is causing at least one unhappiness.
 
+[building_zhukovs_military_academy]
+name		= _("Zhukov's Military Academy")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mobile Warfare", "Player"
+    }
+graphic	= "b.zhukovs_military_academy"
+graphic_alt	= "b.sun_tzus_war_academy"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_sun_tzus_war_academy"
+sound_alt	= "w_generic"
+helptext	= _("\
+All your new military units (land, sea, and air) start with an additional\
+ veteran level, cumulative with Barracks and Port Facilities.  The chance\
+ of a unit getting the next veteran level after a battle increases by half.\
+")
+
 [building_capitalization]
 name		= _("Coinage")
 genus		= "Special"

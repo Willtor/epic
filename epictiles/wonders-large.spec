@@ -55,6 +55,10 @@ artists = "
   b.statue_of_zeus
   b.temple_of_artemis
   b.mausoleum
+
+  Willtor
+  b.spy_satellite_network
+  b.zhukovs_military_academy
 "
 
 [extra]
@@ -94,4 +98,5 @@ sprites =
 		"b.teslas_lab", "epictiles/teslas_lab"
 		"b.united_nations", "wonders/united_nations"
 		"b.womens_suffrage", "wonders/womens_suffrage"
+                "b.zhukovs_military_academy", "epictiles/zhukovs_military_academy"
 	}

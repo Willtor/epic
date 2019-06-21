@@ -2411,6 +2411,26 @@ reqs	=
       "Building", "Women's Suffrage", "Player"
     }
 
+[effect_zhukovs_veteran]
+type    = "Veteran_Build"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Zhukov's Military Academy", "Player", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_zhukovs_combat_vet]
+type    = "Veteran_Combat"
+value	= 50
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Zhukov's Military Academy", "Player", TRUE
+      "UnitFlag", "Diplomat", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 [effect_flight_trade_revenue_reduce]
 type    = "Trade_Revenue_Bonus"
 value   = -585
