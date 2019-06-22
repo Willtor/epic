@@ -1217,7 +1217,8 @@ reqs	=
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
 obsolete_by	=
-    { "type", "name", "range"
+    { "type", "name", "range", "survives"
+      "Tech", "Mass Production", "World", TRUE
     }
 build_cost	= 400
 upkeep		= 0
