@@ -58,6 +58,7 @@ artists = "
 
   Willtor
   b.spy_satellite_network
+  b.world_trade_center
   b.zhukovs_military_academy
 "
 
@@ -98,5 +99,6 @@ sprites =
 		"b.teslas_lab", "epictiles/teslas_lab"
 		"b.united_nations", "wonders/united_nations"
 		"b.womens_suffrage", "wonders/womens_suffrage"
+                "b.world_trade_center", "epictiles/world_trade_center"
                 "b.zhukovs_military_academy", "epictiles/zhukovs_military_academy"
 	}

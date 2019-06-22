@@ -2411,6 +2411,14 @@ reqs	=
       "Building", "Women's Suffrage", "Player"
     }
 
+[effect_world_trade_center]
+type    = "Upkeep_Free"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "World Trade Center", "Player"
+    }
+
 [effect_zhukovs_veteran]
 type    = "Veteran_Build"
 value	= 1

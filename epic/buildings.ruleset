@@ -1227,7 +1227,7 @@ sound		= "w_asmiths_trading_co"
 sound_alt	= "w_generic"
 helptext	= _("\
 City improvements which would normally have an upkeep of 1 are free\
- of upkeep, for all your cities.\
+ of upkeep, for all your cities and those of your teammates.\
 ")
 
 [building_colossus]
@@ -1890,6 +1890,28 @@ Counts as a Police Station in every city. (That is, for each city, it\
 ; NOTE:
 ; For Civ2 this should reduce unhappiness by one for *each* unit
 ; outside a city that is causing at least one unhappiness.
+
+[building_world_trade_center]
+name		= _("World Trade Center")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mass Production", "Player"
+    }
+graphic	= "b.world_trade_center"
+graphic_alt	= "b.asmiths_trading_co"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_asmiths_trading_co"
+sound_alt	= "w_generic"
+helptext	= _("\
+City improvements which would normally have an upkeep of 1 are free\
+ of upkeep, for all your cities.\
+")
 
 [building_zhukovs_military_academy]
 name		= _("Zhukov's Military Academy")
