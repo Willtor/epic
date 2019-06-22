@@ -1910,7 +1910,8 @@ sound		= "w_asmiths_trading_co"
 sound_alt	= "w_generic"
 helptext	= _("\
 City improvements which would normally have an upkeep of 1 are free\
- of upkeep, for all your cities.\
+ of upkeep, for all your cities.  Your traderoutes, too, generate\
+ 20% more revenue for you (and you only).\
 ")
 
 [building_zhukovs_military_academy]
