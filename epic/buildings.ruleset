@@ -1685,6 +1685,7 @@ graphic	= "b.pyramids"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
+      "Tech", "Refrigeration", "World", TRUE
     }
 build_cost	= 200
 upkeep		= 0

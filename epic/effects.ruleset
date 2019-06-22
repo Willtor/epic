@@ -2309,6 +2309,14 @@ reqs	=
       "Building", "Pyramids", "Player"
     }
 
+[effect_refrigeration]
+type    = "Growth_Food"
+value	= 30
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Refrigeration", "Player"
+    }
+
 [effect_seti_program]
 type    = "Output_Bonus"
 value	= 100

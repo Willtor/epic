@@ -736,7 +736,8 @@ graphic     = "a.refrigeration"
 graphic_alt = "-"
 helptext = _("\
 Allows Settlers, Workers and Engineers to upgrade irrigation systems \
-to farmland.\
+to farmland.  The amount of stored food lost when one of your cities\
+ grows or shrinks is also reduced by 30%, cumulative with Granary.\
 ")
 
 [advance_robotics]
