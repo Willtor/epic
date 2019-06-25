@@ -2182,12 +2182,21 @@ reqs	=
       "Building", "Leonardo's Workshop", "Player"
     }
 
-[effect_teslas_lab]
+[effect_teslas_lab_upgrade]
 type    = "Upgrade_Unit"
-value	= 2
+value	= 1
 reqs	=
     { "type", "name", "range"
       "Building", "Tesla's Laboratory", "Player"
+    }
+
+[effect_teslas_lab_research]
+type    = "Output_Bonus"
+value	= 50
+reqs	=
+    { "type", "name", "range"
+      "Building", "Tesla's Laboratory", "City"
+      "OutputType", "Science", "Local"
     }
 
 [effect_lighthouse]

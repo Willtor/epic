@@ -1825,13 +1825,14 @@ graphic_alt	= "b.leonardos_workshop"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 400
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
-Upgrades two obsolete units per game turn.\
+Upgrades one obsolete unit per game turn and increases the\
+ research output of the city in which it's built by 50%.\
 ")
 
 [building_united_nations]
