@@ -2310,6 +2310,14 @@ reqs	=
       "Building", "Oracle", "Player"
     }
 
+[effect_public_television]
+type    = "Force_Content"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Public Television", "Player"
+    }
+
 [effect_pyramids]
 type    = "Growth_Food"
 value	= 25

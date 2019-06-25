@@ -57,6 +57,7 @@ artists = "
   b.mausoleum
 
   Willtor
+  b.public_television
   b.spy_satellite_network
   b.world_trade_center
   b.zhukovs_military_academy
@@ -88,6 +89,7 @@ sprites =
                 "b.mausoleum", "wonders/mausoleum_of_halicarnassus"
 		"b.michelangelos_chapel", "wonders/michelangelos_chapel"
 		"b.oracle", "wonders/oracle"
+                "b.public_television", "epictiles/public_television"
 		"b.pyramids", "wonders/pyramids"
 		"b.seti_program", "wonders/seti_program"
 		"b.shakespeares_theatre", "wonders/shakespeares_theatre"

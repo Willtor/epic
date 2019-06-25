@@ -80,6 +80,15 @@ options="+Freeciv-2.6-ruleset"
 ;
 ; */ <-- avoid gettext warnings
 
+[advance_advanced_communications]
+name     = _("Advanced Communications")
+req1     = "Mass Media"
+req2     = "Space Flight"
+root_req = "Space Flight"
+flags    = ""
+graphic     = "a.space_flight"
+graphic_alt = "-"
+
 [advance_advanced_flight]
 name     = _("Advanced Flight")
 req1     = "Radio"
@@ -516,11 +525,11 @@ flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
 
-[advance_mass_communication]
-name     = _("Mass Communication")
-req1     = "Superconductors"
-req2     = "Space Flight"
-root_req = "Space Flight"
+[advance_mass_media]
+name     = _("Mass Media")
+req1     = "Radio"
+req2     = "Mass Production"
+root_req = "Radio"
 graphic     = "a.computers"
 graphic_alt = "-"
 

@@ -1478,7 +1478,8 @@ reqs	=
 graphic	= "b.js_bachs_cathedral"
 graphic_alt	= "-"
 obsolete_by	=
-    { "type", "name", "range"
+    { "type", "name", "range", "survives"
+      "Tech", "Mass Media", "World", TRUE
     }
 build_cost	= 400
 upkeep		= 0
@@ -1674,6 +1675,28 @@ Makes two additional unhappy citizens content in every city with\
  activity.\
 ")
 
+[building_public_television]
+name		= _("Public Television")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mass Media", "Player"
+    }
+graphic	= "b.public_television"
+graphic_alt	= "b.js_bachs_cathedral"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_js_bachs_cathedral"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes two unhappy citizens content in every city (including citizens\
+ unhappy about military activity).\
+")
+
 [building_pyramids]
 name		= _("Pyramids")
 genus		= "GreatWonder"
@@ -1749,7 +1772,7 @@ name		= _("Spy Satellite Network")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Mass Communication", "Player"
+      "Tech", "Advanced Communications", "Player"
     }
 graphic	= "b.spy_satellite_network"
 graphic_alt	= "b.apollo_program"
