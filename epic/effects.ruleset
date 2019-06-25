@@ -2415,7 +2415,7 @@ type    = "Unit_Recover"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "United Nations", "Player"
+      "Building", "United Nations", "Team"
     }
 
 [effect_womens_suffrage]
