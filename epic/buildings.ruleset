@@ -1675,6 +1675,27 @@ Makes two additional unhappy citizens content in every city with\
  activity.\
 ")
 
+[building_orbital_power_station]
+name		= _("Orbital Power Station")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Space Habitation", "Player"
+    }
+graphic	= "b.orbital_power_station"
+graphic_alt	= "b.apollo_program"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_apollo_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+Completely eliminates pollution caused by production in every city.\
+")
+
 [building_public_television]
 name		= _("Public Television")
 genus		= "SmallWonder"

@@ -794,6 +794,15 @@ flags    = ""
 graphic     = "a.space_flight"
 graphic_alt = "-"
 
+[advance_space_habitation]
+name     = _("Space Habitation")
+req1     = "Fusion Power"
+req2     = "Space Flight"
+root_req = "Space Flight"
+flags    = ""
+graphic     = "a.space_flight"
+graphic_alt = "-"
+
 [advance_stealth]
 name     = _("Stealth")
 req1     = "Superconductors"
