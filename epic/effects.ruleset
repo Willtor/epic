@@ -1266,7 +1266,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_hydro_plant_1]
@@ -1280,7 +1280,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_hydro_plant_2]
@@ -1294,7 +1294,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_hydro_plant_3]
@@ -1308,7 +1308,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_genetic_lab_health]
@@ -1428,7 +1428,7 @@ reqs	=
       "OutputType", "Shield", "Local", TRUE
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_nuclear_plant_1]
@@ -1441,7 +1441,7 @@ reqs	=
       "OutputType", "Shield", "Local", TRUE
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_nuclear_plant_2]
@@ -1454,7 +1454,7 @@ reqs	=
       "Building", "Recycling Center", "City", FALSE
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_nuclear_plant_3]
@@ -1467,7 +1467,7 @@ reqs	=
       "Building", "Recycling Center", "City", FALSE
       "Building", "Hoover Dam", "Player", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_offshore_platform]
@@ -1621,7 +1621,7 @@ reqs	=
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Hydro Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_power_plant_1]
@@ -1636,7 +1636,16 @@ reqs	=
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Hydro Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
+    }
+
+[effect_recycling_center_minus_1]
+type    = "Pollu_Prod_Pct"
+value	= -66
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Recycling Center", "City", TRUE
+      "Building", "Orbital Power Grid", "Player", TRUE
     }
 
 [effect_recycling_center]
@@ -1648,7 +1657,7 @@ reqs	=
 ; A Solar Plant can give a stronger effect than a Recycling Center, in which
 ; case we want only the Solar Plant's effect (not the addition of the two).
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 ; Nasty special cases: where a Solar Plant is present but its effect is less
@@ -1667,7 +1676,7 @@ reqs	=
       "Building", "Solar Plant", "City", TRUE
       "Building", "Factory", "City", TRUE
       "Building", "Mfg. Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 ; Mfg. Plant and no Factory: Solar Plant saves 50%, less than 66%; add 16%
@@ -1680,7 +1689,7 @@ reqs	=
       "Building", "Solar Plant", "City", TRUE
       "Building", "Mfg. Plant", "City", TRUE
       "Building", "Factory", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 ; Neither Factory nor Mfg. Plant: Solar Plant saves 0%; add 66%
@@ -1693,7 +1702,7 @@ reqs	=
       "Building", "Solar Plant", "City", TRUE
       "Building", "Factory", "City", FALSE
       "Building", "Mfg. Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_research_lab]
@@ -1789,7 +1798,7 @@ reqs	=
     { "type", "name", "range"
       "Building", "Factory", "City"
       "Building", "Solar Plant", "City"
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_solar_plant_3]
@@ -1799,7 +1808,7 @@ reqs	=
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
       "Building", "Solar Plant", "City"
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_space_component]
@@ -2138,7 +2147,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", TRUE
       "OutputType", "Shield", "Local", TRUE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_hoover_dam_1]
@@ -2150,7 +2159,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", TRUE
       "OutputType", "Shield", "Local", TRUE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_hoover_dam_2]
@@ -2162,7 +2171,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", TRUE
       "Building", "Recycling Center", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_hoover_dam_3]
@@ -2174,7 +2183,7 @@ reqs	=
       "Building", "Hoover Dam", "Player", TRUE
       "Building", "Recycling Center", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
-      "Building", "Orbital Power Station", "Player", FALSE
+      "Building", "Orbital Power Grid", "Player", FALSE
     }
 
 [effect_isaac_newtons_college]
@@ -2340,32 +2349,42 @@ reqs	=
       "Building", "Oracle", "Player"
     }
 
-[effect_orbital_power_station]
+[effect_orbital_power_grid]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Factory", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Orbital Power Station", "Player", TRUE
+      "Building", "Orbital Power Grid", "Player", TRUE
     }
 
-[effect_orbital_power_station_1]
+[effect_orbital_power_grid_1]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Mfg. Plant", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Orbital Power Station", "Player", TRUE
+      "Building", "Orbital Power Grid", "Player", TRUE
     }
 
-[effect_orbital_power_station_2]
+[effect_orbital_power_grid_2]
 type    = "Pollu_Prod_Pct"
-value	= -100
+value	= -34
 reqs	=
     { "type", "name", "range", "present"
-      "Building", "Orbital Power Station", "Player", TRUE
+      "Building", "Orbital Power Grid", "Player", TRUE
+      "Building", "Recycling Center", "City", TRUE
+    }
+
+[effect_orbital_power_grid_3]
+type    = "Pollu_Prod_Pct"
+value	= -66
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Orbital Power Grid", "Player", TRUE
+      "Building", "Recycling Center", "City", FALSE
     }
 
 [effect_public_television]

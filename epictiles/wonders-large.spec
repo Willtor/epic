@@ -57,7 +57,7 @@ artists = "
   b.mausoleum
 
   Willtor
-  b.orbital_power_station
+  b.orbital_power_grid
   b.public_television
   b.spy_satellite_network
   b.world_trade_center
@@ -90,7 +90,7 @@ sprites =
                 "b.mausoleum", "wonders/mausoleum_of_halicarnassus"
 		"b.michelangelos_chapel", "wonders/michelangelos_chapel"
 		"b.oracle", "wonders/oracle"
-                "b.orbital_power_station", "epictiles/orbital_power_station"
+                "b.orbital_power_grid", "epictiles/orbital_power_grid"
                 "b.public_television", "epictiles/public_television"
 		"b.pyramids", "wonders/pyramids"
 		"b.seti_program", "wonders/seti_program"

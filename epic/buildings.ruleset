@@ -1675,14 +1675,14 @@ Makes two additional unhappy citizens content in every city with\
  activity.\
 ")
 
-[building_orbital_power_station]
-name		= _("Orbital Power Station")
+[building_orbital_power_grid]
+name		= _("Orbital Power Grid")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Habitation", "Player"
     }
-graphic	= "b.orbital_power_station"
+graphic	= "b.orbital_power_grid"
 graphic_alt	= "b.apollo_program"
 obsolete_by	=
     { "type", "name", "range"
@@ -1693,7 +1693,9 @@ sabotage	= 0
 sound		= "w_apollo_program"
 sound_alt	= "w_generic"
 helptext	= _("\
-Completely eliminates pollution caused by production in every city.\
+Eliminates two thirds of pollution caused by production in every city.\
+ Cumulative with a Recycling Center, this completely eliminates pollution\
+ due to production.\
 ")
 
 [building_public_television]
