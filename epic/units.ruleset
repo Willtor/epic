@@ -1882,7 +1882,7 @@ The AEGIS Cruiser is equipped with an advanced\
 name          = _("Battleship")
 class         = "Sea"
 tech_req      = "Automobile"
-obsolete_by   = "None"
+obsolete_by   = "Floating Fortress"
 graphic       = "u.battleship"
 graphic_alt   = "-"
 sound_move    = "m_battleship"
@@ -1909,6 +1909,46 @@ roles         = ""
 helptext      = _("\
 The Battleship is the supreme naval unit with\
  excellent offensive and defensive values.\
+")
+
+[unit_floating_fortress]
+name          = _("Floating Fortress")
+class         = "Sea"
+tech_req      = "Heavy Propulsion"
+obsolete_by   = "None"
+graphic       = "u.floating_fortress"
+graphic_alt   = "u.battleship"
+sound_move    = "m_battleship"
+sound_move_alt = "m_generic"
+sound_fight   = "f_battleship"
+sound_fight_alt = "f_generic"
+build_cost    = 160
+pop_cost      = 0
+attack        = 14
+defense       = 14
+hitpoints     = 45
+firepower     = 2
+move_rate     = 4
+vision_radius_sq = 8
+transport_cap = 2
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+cargo         = "Land", "Big Land"
+bonuses       =
+   { "flag", "type", "value"
+     "AirAttacker", "DefenseMultiplier", 2
+   }
+flags         = "BadCityDefender", "Bombarder"
+bombard_rate  = 8
+roles         = ""
+helptext      = _("\
+The Floating Fortress is the nigh-unsinkable behemoth\
+ designed for sea supremacy.  This leviathan is capable\
+ of carrying and deploying ground attack forces, and is\
+ equipped with limited AEGIS.\
 ")
 
 [unit_submarine]

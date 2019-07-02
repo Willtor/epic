@@ -418,6 +418,15 @@ flags    = ""
 graphic     = "a.gunpowder"
 graphic_alt = "-"
 
+[advance_heavy_propulsion]
+name     = _("Heavy Propulsion")
+req1     = "Fusion Power"
+req2     = "Artificial Intelligence"
+root_req = "Fusion Power"
+flags    = ""
+graphic     = "a.fusion"
+graphic_alt = "-"
+
 [advance_horseback_riding]
 name     = _("Horseback Riding")
 req1     = "None"
