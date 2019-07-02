@@ -437,8 +437,8 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 80
-upkeep		= 3
+build_cost	= 60
+upkeep		= 1
 sabotage	= 100
 sound		= "-"
 sound_alt	= "b_generic"
