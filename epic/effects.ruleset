@@ -166,7 +166,7 @@ type    = "Move_Bonus"
 value	= 1
 reqs	=
     { "type", "name", "range"
-      "Tech", "Fusion Power", "Player"
+      "Tech", "Fusion Propulsion", "Player"
       "UnitClass", "Sea", "Local"
     }
 

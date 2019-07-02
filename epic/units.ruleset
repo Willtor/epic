@@ -1914,7 +1914,7 @@ The Battleship is the supreme naval unit with\
 [unit_floating_fortress]
 name          = _("Floating Fortress")
 class         = "Sea"
-tech_req      = "Heavy Propulsion"
+tech_req      = "Fusion Power"
 obsolete_by   = "None"
 graphic       = "u.floating_fortress"
 graphic_alt   = "u.battleship"

@@ -391,6 +391,16 @@ flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
 
+[advance_fusion_propulsion]
+name     = _("Fusion Propulsion")
+req1     = "Fusion Power"
+req2     = "Artificial Intelligence"
+root_req = "Fusion Power"
+flags    = ""
+graphic     = "a.fusion"
+graphic_alt = "-"
+helptext = _("Increases range of sea units by one.")
+
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
 req1     = "Medicine"
@@ -416,15 +426,6 @@ req2     = "Iron Working"
 root_req = "Invention"
 flags    = ""
 graphic     = "a.gunpowder"
-graphic_alt = "-"
-
-[advance_heavy_propulsion]
-name     = _("Heavy Propulsion")
-req1     = "Fusion Power"
-req2     = "Artificial Intelligence"
-root_req = "Fusion Power"
-flags    = ""
-graphic     = "a.fusion"
 graphic_alt = "-"
 
 [advance_horseback_riding]
@@ -806,8 +807,8 @@ graphic_alt = "-"
 [advance_space_habitation]
 name     = _("Space Habitation")
 req1     = "Fusion Power"
-req2     = "Space Flight"
-root_req = "Space Flight"
+req2     = "Environmentalism"
+root_req = "Fusion Power"
 flags    = ""
 graphic     = "a.space_flight"
 graphic_alt = "-"
