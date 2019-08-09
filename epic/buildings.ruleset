@@ -1519,7 +1519,7 @@ name		= _("Leonardo's Workshop")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Invention", "Player"
+      "Tech", "Automobile", "Player"
     }
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
