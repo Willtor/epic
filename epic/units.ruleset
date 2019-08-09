@@ -1582,9 +1582,9 @@ sound_move    = "m_stealth_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 80
 pop_cost      = 0
-attack        = 16
+attack        = 14
 defense       = 1
 hitpoints     = 15
 firepower     = 2
@@ -1596,7 +1596,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker",
+flags         = "Partial_Invis", "FieldUnit", "AirAttacker",
                 "HasNoZOC"
 roles         = ""
 helptext      = _("\
@@ -2081,8 +2081,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "FieldUnit", "OneAttack", "AirAttacker",
-                "HasNoZOC", "Bombarder"
-bombard_rate  = 5
+                "HasNoZOC"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
